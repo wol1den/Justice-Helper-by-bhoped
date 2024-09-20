@@ -3,7 +3,7 @@
 script_name("Justice Helper")
 script_description('This is a Cross-platform Lua script helper for Arizona RP players who work in the Ministry of Justice (PD and FBI) ??and the Ministry of Defense (Army)')
 script_author("MTG MODS (and edited by bhoped)")
-script_version("1.2 STABLE")
+script_version("1.2 ALPHA")
 
 require('lib.moonloader')
 require ('encoding').default = 'CP1251'
@@ -2302,7 +2302,7 @@ function check_update()
 	sampAddChatMessage('[Justice Helper] {ffffff}Начинаю проверку на наличие обновлений...', message_color)
 	local path = configDirectory .. "/Update_Info.json"
 	os.remove(path)
-	local url = 'https://raw.githubusercontent.com/MTGMODS/justice-helper/main/Update_Info.json'
+	local url = 'https://raw.githubusercontent.com/wol1den/Justice-Helper-by-bhoped/main/Update_Info.json'
 	if isMonetLoader() then
 		downloadToFile(url, path, function(type, pos, total_size)
 			if type == "finished" then
